@@ -1,0 +1,176 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body {
+  font-family: 'Balsamiq Sans', cursive;
+}
+
+.navbar {
+  max-width: 640px;
+  margin: 50px auto;
+  display: flex;
+  padding: 0 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar__logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.navbar__logo h2 {
+  margin-left: 20px;
+}
+
+.navbar__navigation {
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar__navigation-item {
+  padding: 0 5px;
+}
+
+.navbar__link {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  color: #3cd0ff;
+}
+
+main {
+  max-width: 540px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+main section h3 {
+  margin-bottom: 50px;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.form__input {
+  width: 100%;
+}
+
+.entry__label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.entry__text {
+  width: inherit;
+  font-size: 16px;
+  padding: 15px;
+  border: none;
+  outline: none;
+  font-family: 'Balsamiq Sans', cursive;
+  font-weight: lighter;
+  background-color: #ece6e6;
+  margin-bottom: 10px;
+  height: 100px;
+  resize: none;
+}
+
+.form__submit {
+  background-color: #3cd0ff;
+  border: none;
+  outline: none;
+  padding: 7px 15px;
+  border-radius: 5px;
+  font-size: 14px;
+
+  font-family: 'Balsamiq Sans', cursive;
+}
+
+.form__submit:hover {
+  background-color: black;
+  color: white;
+}
+
+main section {
+  margin-bottom: 50px;
+}
+
+.recent__title {
+  display: inline;
+  font-size: 18px;
+}
+
+.recent__date {
+  color: rgb(186, 186, 186);
+  font-size: 15px;
+}
+
+.recent__content {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-top: 10px;
+}
+
+.posts{
+	margin-bottom: 50px;
+}
+
+.footer {
+  background-color: #4b464b;
+  padding: 40px 0;
+  border-top: 2px solid black;
+  color: white;
+  font-size: 10px;
+
+
+}
+
+.footer__content {
+  width: 640px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.left {
+  flex-grow: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-weight: lighter;
+}
+
+.left a, .right a {
+  text-decoration: none;
+  color: white;
+}
+
+.left a:hover, .right a:hover{
+	color: #3cd0ff;
+}
+
+.right {
+	flex-grow: 1;
+	display: flex;
+
+	gap: 10px;
+	font-weight: lighter;
+  }
+
+  .footer__column{
+	display: flex;
+	flex-direction: column;
+	margin-left: 50px;
+	gap: 10px;
+  }

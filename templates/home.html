@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link type="text/css" rel="stylesheet" href="static/styles/style.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="navbar__logo">
+        <img src="static/svg/Logo.svg" alt="micro blog logo" />
+        <h2>Microblog</h2>
+      </div>
+      <ul class="navbar__navigation">
+        <li class="navbar__navigation-item">
+          <a class="navbar__link" href="#">Recent</a>
+        </li>
+        <li class="navbar__navigation-item">
+          <a class="navbar__link" href="#">Calender</a>
+        </li>
+      </ul>
+    </header>
+
+    <main class="main">
+      <section class="section">
+        <h3>Add New Entry</h3>
+        <form class="form" method="POST">
+          <p class="form__input">
+            <textarea
+              aria-label="Entry Content"
+              name="content"
+              id="entry"
+              placeholder="Write a blog today!"
+              class="entry__text"
+            ></textarea>
+          </p>
+
+          <button class="form__submit" type="submit">Add Entry</button>
+        </form>
+      </section>
+
+      <section class="posts">
+        <h3>Recent Posts</h3>
+        {% for entry in entries %}
+        <article class="recent">
+          <div>
+            <h4 class="recent__title">{{entry[0] | truncate(30, true)}}</h4>
+            <time class="recent__date" datetime="{{entry[1]}}"
+              >• {{entry[2]}}</time
+            >
+          </div>
+          <p class="recent__content">{{entry[0]}}</p>
+        </article>
+        {% endfor %}
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__content">
+        <section class="left">
+          <a href="#" class="footer__item">Made by Mahmoud Taha</a>
+          <a href="#" class="footer__item">Check out other projects</a>
+        </section>
+        <section class="right">
+          <div class="footer__column">
+            <a href="#" class="footer__item">Recent</a>
+            <a href="#" class="footer__item">Calender</a>
+          </div>
+          <div class="footer__column">
+            <a href="#" class="footer__item">About</a>
+            <a href="#" class="footer__item">How we made this</a>
+          </div>
+        </section>
+      </div>
+    </footer>
+  </body>
+</html>
