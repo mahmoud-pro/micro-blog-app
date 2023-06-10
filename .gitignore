@@ -524,7 +524,7 @@ poetry.toml
 
 # LSP config files
 pyrightconfig.json
-
+.vscode
 ### PythonVanilla ###
 # Byte-compiled / optimized / DLL files
 
